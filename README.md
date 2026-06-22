@@ -54,7 +54,7 @@ No fim da semana, a arquitetura combina:
 
 Além desta documentação em Markdown, a trilha também possui uma interface frontend em:
 
-- [Abrir frontend da Semana do Desenvolvedor EDN](./site/index.html)
+- [Abrir frontend da Semana do Desenvolvedor EDN](https://ferfaoliver-ferreira.github.io/Semana_do_Desenvolvedor_EDN/)
 
 Nela, você encontra:
 
