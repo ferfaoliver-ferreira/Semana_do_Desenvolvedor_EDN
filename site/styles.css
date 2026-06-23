@@ -59,6 +59,13 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+.card-link:focus-visible {
+  outline: 2px solid rgba(255, 190, 71, 0.92);
+  outline-offset: 3px;
+}
+
 a,
 button {
   -webkit-tap-highlight-color: transparent;
@@ -201,6 +208,7 @@ body.nav-open .menu-toggle span:nth-child(3) {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .button,
@@ -500,6 +508,7 @@ body.nav-open .menu-toggle span:nth-child(3) {
 .card-link:focus-visible {
   transform: translateY(-2px);
   border-color: rgba(255, 184, 61, 0.24);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.24);
 }
 
 .card-link:active {
@@ -667,6 +676,10 @@ body.nav-open .menu-toggle span:nth-child(3) {
   max-width: var(--copy);
 }
 
+.page-hero .hero-actions {
+  margin-top: 24px;
+}
+
 .page-visual {
   padding: 18px;
   border-radius: var(--radius-xl);
@@ -729,6 +742,10 @@ body.nav-open .menu-toggle span:nth-child(3) {
 }
 
 .toc a:hover {
+  color: var(--text);
+}
+
+.toc a:focus-visible {
   color: var(--text);
 }
 
@@ -810,6 +827,17 @@ body.nav-open .menu-toggle span:nth-child(3) {
   margin: 10px 0 0;
 }
 
+#visao-geral,
+#arquitetura-dia,
+#objetivos,
+#fluxo,
+#resultado,
+#entregaveis,
+#trilha,
+#arquitetura {
+  scroll-margin-top: calc(var(--nav-height) + 18px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -875,6 +903,7 @@ body.nav-open .menu-toggle span:nth-child(3) {
   .header-actions {
     width: 100%;
     display: none;
+    flex-direction: column;
   }
 
   body.nav-open .header-actions {

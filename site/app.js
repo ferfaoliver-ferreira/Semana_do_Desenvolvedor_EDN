@@ -1,4 +1,5 @@
 const orderedDays = ["dia-1", "dia-2", "dia-3", "dia-4"];
+const repoUrl = "https://github.com/ferfaoliver-ferreira/Semana_do_Desenvolvedor_EDN";
 
 const dayData = {
   "dia-1": {
@@ -183,14 +184,14 @@ const globalResources = [
     href: "../arquitetura-completa.png"
   },
   {
-    title: "README principal",
-    text: "Documentação central da trilha com visão geral, arquiteturas e organização dos quatro dias.",
-    href: "../README.md"
-  },
-  {
     title: "Documentação original",
     text: "Cada dia continua com seu README completo, evidências visuais e passo a passo detalhado.",
     href: "../dia-1-api-eventbridge/README.md"
+  },
+  {
+    title: "Repositório no GitHub",
+    text: "Código, documentação e frontend publicados no repositório independente da trilha.",
+    href: repoUrl
   }
 ];
 
@@ -232,6 +233,7 @@ function navMarkup(current) {
         </nav>
         <div class="header-actions">
           <a class="ghost-button" href="../README.md">Ver README</a>
+          <a class="button" href="${repoUrl}" target="_blank" rel="noreferrer">Ver no GitHub</a>
         </div>
       </div>
     </header>
@@ -273,7 +275,7 @@ function footerMarkup() {
               <ul>
                 <li><a href="../README.md">README da trilha</a></li>
                 <li><a href="../arquitetura-completa.png">Arquitetura completa</a></li>
-                <li><a href="../README.md">README da trilha</a></li>
+                <li><a href="${repoUrl}" target="_blank" rel="noreferrer">Repositório no GitHub</a></li>
               </ul>
             </div>
             <div>
@@ -357,6 +359,7 @@ function renderHome() {
             <div class="hero-actions">
               <a class="button" href="#trilha">Explorar trilha</a>
               <a class="ghost-button" href="#arquitetura">Ver arquitetura</a>
+              <a class="ghost-button" href="${repoUrl}" target="_blank" rel="noreferrer">Abrir GitHub</a>
             </div>
           </div>
           <div class="hero-visual">
@@ -581,6 +584,7 @@ function renderDayPage(key) {
             <div class="hero-actions">
               <a class="button" href="${item.readme}">Abrir README</a>
               <a class="ghost-button" href="index.html">Voltar à trilha</a>
+              <a class="ghost-button" href="${repoUrl}" target="_blank" rel="noreferrer">Voltar ao GitHub</a>
             </div>
           </div>
           <div class="page-visual">
@@ -674,6 +678,7 @@ function renderDayPage(key) {
               <h3 style="margin-top:22px;">Documentação original</h3>
               <p>O README completo continua sendo a referência detalhada do passo a passo, dos recursos criados e das evidências visuais.</p>
               <a class="link-arrow" href="${item.readme}">Abrir README →</a>
+              <a class="link-arrow" href="${repoUrl}" target="_blank" rel="noreferrer">Voltar ao GitHub →</a>
             </article>
           </aside>
         </div>
