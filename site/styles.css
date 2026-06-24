@@ -667,13 +667,13 @@ body.nav-open .menu-toggle span:nth-child(3) {
 
 .page-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
   gap: 28px;
   align-items: start;
 }
 
 .page-hero .copy-block {
-  max-width: var(--copy);
+  max-width: none;
 }
 
 .page-hero .hero-actions {
@@ -697,7 +697,7 @@ body.nav-open .menu-toggle span:nth-child(3) {
 }
 
 .page-hero .facts-grid {
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
 }
 
@@ -874,10 +874,13 @@ body.nav-open .menu-toggle span:nth-child(3) {
   .timeline,
   .services-grid,
   .resources-grid,
-  .facts-grid,
   .steps-grid,
   .readme-grid,
   .pager {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .facts-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
