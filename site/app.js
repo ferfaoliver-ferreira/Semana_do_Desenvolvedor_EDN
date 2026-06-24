@@ -1,13 +1,14 @@
 const orderedDays = ["dia-1", "dia-2", "dia-3", "dia-4"];
 const repoUrl = "https://github.com/ferfaoliver-ferreira/Semana_do_Desenvolvedor_EDN";
+const readmeBaseUrl = "https://github.com/ferfaoliver-ferreira/Semana_do_Desenvolvedor_EDN/blob/main";
 
 const dayData = {
   "dia-1": {
     number: "Dia 1",
     title: "API e EventBridge",
     slug: "dia-1.html",
-    readme: "../dia-1-api-eventbridge/README.md",
-    image: "../dia-1-api-eventbridge/images/arquitetura-dia-1.png",
+    readme: `${readmeBaseUrl}/dia-1-api-eventbridge/README.md`,
+    image: "assets/arquitetura-dia-1.png",
     duration: "Base da ingestão em tempo real",
     intro:
       "O primeiro laboratório cria a fundação da solução com entrada via API REST, pré-validação, enfileiramento em FIFO e publicação de eventos em um custom event bus.",
@@ -48,8 +49,8 @@ const dayData = {
     number: "Dia 2",
     title: "S3 e Integração",
     slug: "dia-2.html",
-    readme: "../dia-2-s3-integracao/README.md",
-    image: "../dia-2-s3-integracao/images/arquitetura-dia-2.png",
+    readme: `${readmeBaseUrl}/dia-2-s3-integracao/README.md`,
+    image: "assets/arquitetura-dia-2.png",
     duration: "Entrada em lote e rastreamento",
     intro:
       "No segundo dia, o projeto ganha uma segunda porta de entrada: arquivos JSON enviados ao Amazon S3, validados por Lambda e integrados ao mesmo pipeline principal de pedidos.",
@@ -90,8 +91,8 @@ const dayData = {
     number: "Dia 3",
     title: "Processamento de Pedidos",
     slug: "dia-3.html",
-    readme: "../dia-3-processamento-pedidos/README.md",
-    image: "../dia-3-processamento-pedidos/images/arquitetura-dia-3.png",
+    readme: `${readmeBaseUrl}/dia-3-processamento-pedidos/README.md`,
+    image: "assets/arquitetura-dia-3.png",
     duration: "Camada central de negócio",
     intro:
       "O terceiro laboratório concentra a lógica central do pedido: eventos validados são roteados para uma fila de processamento e persistidos em uma tabela principal no DynamoDB.",
@@ -132,8 +133,8 @@ const dayData = {
     number: "Dia 4",
     title: "Fluxos e DLQ",
     slug: "dia-4.html",
-    readme: "../dia-4-fluxos-dlq/README.md",
-    image: "../dia-4-fluxos-dlq/images/arquitetura-dia-4.png",
+    readme: `${readmeBaseUrl}/dia-4-fluxos-dlq/README.md`,
+    image: "assets/arquitetura-dia-4.png",
     duration: "Ciclo de vida e resiliência",
     intro:
       "A etapa final expande a arquitetura para cancelamento, alteração de pedidos e teste prático de DLQs, consolidando uma solução orientada a eventos mais completa.",
@@ -176,17 +177,17 @@ const globalResources = [
   {
     title: "README da trilha",
     text: "Resumo geral da Semana do Desenvolvedor EDN e visão consolidada da arquitetura.",
-    href: "../README.md"
+    href: `${readmeBaseUrl}/README.md`
   },
   {
     title: "Arquitetura completa",
     text: "Imagem central do sistema integrado ao longo dos quatro dias do laboratório.",
-    href: "../arquitetura-completa.png"
+    href: "assets/arquitetura-completa.png"
   },
   {
     title: "Documentação original",
     text: "Cada dia continua com seu README completo, evidências visuais e passo a passo detalhado.",
-    href: "../dia-1-api-eventbridge/README.md"
+    href: `${readmeBaseUrl}/dia-1-api-eventbridge/README.md`
   },
   {
     title: "Repositório no GitHub",
@@ -232,7 +233,7 @@ function navMarkup(current) {
             .join("")}
         </nav>
         <div class="header-actions">
-          <a class="ghost-button" href="../README.md">Ver README</a>
+          <a class="ghost-button" href="${readmeBaseUrl}/README.md" target="_blank" rel="noreferrer">Ver README</a>
           <a class="button" href="${repoUrl}" target="_blank" rel="noreferrer">Ver no GitHub</a>
         </div>
       </div>
@@ -273,8 +274,8 @@ function footerMarkup() {
             <div>
               <h4>Recursos</h4>
               <ul>
-                <li><a href="../README.md">README da trilha</a></li>
-                <li><a href="../arquitetura-completa.png">Arquitetura completa</a></li>
+                <li><a href="${readmeBaseUrl}/README.md" target="_blank" rel="noreferrer">README da trilha</a></li>
+                <li><a href="assets/arquitetura-completa.png">Arquitetura completa</a></li>
                 <li><a href="${repoUrl}" target="_blank" rel="noreferrer">Repositório no GitHub</a></li>
               </ul>
             </div>
@@ -389,10 +390,10 @@ function renderHome() {
             <p>Ao final da trilha, a solução reúne API REST, ingestão por S3, processamento assíncrono com SQS, roteamento via EventBridge, notificações com SNS e persistência em DynamoDB.</p>
           </div>
           <div class="architecture-frame">
-            <img src="../arquitetura-completa.png" alt="Arquitetura completa da Semana do Desenvolvedor EDN">
+            <img src="assets/arquitetura-completa.png" alt="Arquitetura completa da Semana do Desenvolvedor EDN">
             <div class="architecture-actions">
               <span>Fluxo unificado construído ao longo dos quatro dias do laboratório.</span>
-              <a class="link-arrow" href="../README.md">Ler documentação principal →</a>
+              <a class="link-arrow" href="${readmeBaseUrl}/README.md" target="_blank" rel="noreferrer">Ler documentação principal →</a>
             </div>
           </div>
         </div>
